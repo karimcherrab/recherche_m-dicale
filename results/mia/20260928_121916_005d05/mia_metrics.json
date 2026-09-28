@@ -1,0 +1,81 @@
+{
+  "attack": "negative_mean_patient_BCE",
+  "checkpoint_sha256": "4e86b03b27a3c5a93fd0092e17a9ca9e89b31bdf4013c7f1a7d1dc2499d563f2",
+  "checkpoint_epoch": 4,
+  "feature_names_sha256": "55f2bacf617cb8a0c3e41281687d729bd43dfd67482cf5b0f45816621ed2bcc3",
+  "seed": 2026,
+  "bootstrap_repeats": 300,
+  "torch_version": "2.14.0+cpu",
+  "device": "cpu",
+  "model_dir": "D:\\Doctorat\\prototype\\results\\baseline\\20260928_120542_756287",
+  "data_dir": "D:\\Doctorat\\prototype\\data\\processed",
+  "patient_counts": {
+    "auxiliary": 14303,
+    "train": 35759,
+    "test": 14305
+  },
+  "global": {
+    "auc": 0.5057746771297491,
+    "bootstrap_95_ci": [
+      0.5005422296534652,
+      0.5109224456991731
+    ]
+  },
+  "operating_points": [
+    {
+      "members": 35759,
+      "nonmembers": 14305,
+      "true_positives": 388,
+      "false_positives": 177,
+      "tpr": 0.010850415280069354,
+      "observed_fpr": 0.012373296050332052,
+      "tpr_95_ci": [
+        0.0098279642408988,
+        0.011977950138657606
+      ],
+      "fpr_95_ci": [
+        0.010688205831836635,
+        0.014320210108092769
+      ],
+      "advantage_tpr_minus_fpr": -0.0015228807702626981,
+      "balanced_accuracy": 0.49923855961486857,
+      "nominal_calibration_fpr": 0.01,
+      "threshold": -0.00079117380673324,
+      "auxiliary_observed_fpr": 0.009997902537929105
+    },
+    {
+      "members": 35759,
+      "nonmembers": 14305,
+      "true_positives": 2007,
+      "false_positives": 796,
+      "tpr": 0.0561257305853072,
+      "observed_fpr": 0.05564487941279273,
+      "tpr_95_ci": [
+        0.05378748369010021,
+        0.05855933482114864
+      ],
+      "fpr_95_ci": [
+        0.0520062756207747,
+        0.0595220730169088
+      ],
+      "advantage_tpr_minus_fpr": 0.0004808511725144654,
+      "balanced_accuracy": 0.5002404255862571,
+      "nominal_calibration_fpr": 0.05,
+      "threshold": -0.01766068074124603,
+      "auxiliary_observed_fpr": 0.04998951268964553
+    }
+  ],
+  "notes": [
+    "Attacker knows all observed records and labels of each candidate patient and queries model probabilities.",
+    "Members: Train. Nonmember evaluation: Test. Nonmember calibration: Auxiliary. Validation unused.",
+    "Fixed score direction: high score means member. No direction/aggregation tuned on Test.",
+    "Nominal FPR refers to Auxiliary calibration. Actual Test FPR can differ; report both TPR and observed FPR.",
+    "Scores and binary attack decisions are NOT individual risk probabilities or clinical predictions.",
+    "AUC bootstrap resamples patients separately by membership, conditional on this fixed trained model.",
+    "Wilson intervals condition on the calibrated threshold; they exclude calibration/retraining uncertainty.",
+    "Subgroups use the GLOBAL threshold, so their FPR need not equal the nominal calibration FPR.",
+    "Low attack AUC is not a privacy guarantee; strong/individualized attacks may perform differently.",
+    "This is a single-model empirical audit, not an estimate of worst-case individual patient risk.",
+    "Test is now an audit set: do not repeatedly tune attacks/defenses on it and claim independent final evaluation."
+  ]
+}

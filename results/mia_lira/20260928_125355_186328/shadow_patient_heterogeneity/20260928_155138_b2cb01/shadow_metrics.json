@@ -1,0 +1,34 @@
+{
+  "models": 32,
+  "pool_patients": 64367,
+  "n_in_range": [
+    17,
+    18
+  ],
+  "n_out_range": [
+    14,
+    15
+  ],
+  "mean_patient_auc": 0.5292501136217637,
+  "median_patient_auc": 0.5317460317460317,
+  "q95_patient_auc": 0.8690476190476191,
+  "q99_patient_auc": 0.9603174603174603,
+  "fraction_auc_at_least_0.8": 0.105550981092796,
+  "fraction_auc_at_least_0.95": 0.012475336740876536,
+  "mean_holdout_top5_auc": 0.8205368489173454,
+  "mean_holdout_all_auc": 0.5301725873915185,
+  "mean_holdout_top5_uplift": 0.29036426152582695,
+  "min_holdout_top5_uplift": 0.2023050108323825,
+  "null_mean_q99_auc": 0.7404450669156551,
+  "null_mean_top5_uplift": 0.0017837727853808882,
+  "notes": [
+    "Scores compare the same entire patient IN vs OUT across saved shadow models.",
+    "These are estimates for the shadow-model training distribution, NOT for the single original target checkpoint.",
+    "With only 32 shadows, high individual AUC estimates are noisy and selecting from 64k patients inflates the extreme tail.",
+    "Top 5% were chosen using only first-half shadow scores; holdout AUC comes from the other half.",
+    "Repeated half-splits reuse the same 32 correlated shadow models; this does not supply independent uncertainty intervals.",
+    "Negative controls permute shadow membership labels independently for each patient; they are diagnostics, not an exact p-value under correlated shadow training.",
+    "The frozen original preprocessing may include patients called OUT for a particular shadow model.",
+    "Do not treat these AUC scores as individual membership probabilities or clinical privacy-risk estimates."
+  ]
+}

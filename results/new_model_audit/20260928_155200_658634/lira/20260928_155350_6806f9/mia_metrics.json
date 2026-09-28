@@ -1,0 +1,109 @@
+{
+  "attack": "patient-level online Gaussian LiRA adaptation",
+  "checkpoint_epoch": 3,
+  "n_shadows": 28,
+  "shadow_best_epochs": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    2,
+    3,
+    2,
+    2,
+    2,
+    3,
+    2,
+    1,
+    1,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    3
+  ],
+  "in_out_count_ranges": {
+    "in": [
+      6,
+      7
+    ],
+    "out": [
+      21,
+      22
+    ]
+  },
+  "patient_counts": {
+    "train": 16000,
+    "auxiliary": 34062,
+    "test": 14305
+  },
+  "global": {
+    "auc": 0.5287310249912617,
+    "bootstrap_95_ci": [
+      0.5223490040086508,
+      0.5350205708231387
+    ]
+  },
+  "operating_points": [
+    {
+      "members": 16000,
+      "nonmembers": 14305,
+      "true_positives": 214,
+      "false_positives": 140,
+      "tpr": 0.013375,
+      "observed_fpr": 0.009786787836420832,
+      "advantage": 0.003588212163579168,
+      "tpr_95_ci": [
+        0.011708227717078553,
+        0.015275384931913287
+      ],
+      "fpr_95_ci": [
+        0.00830004916409608,
+        0.01153673913477209
+      ],
+      "nominal_auxiliary_fpr": 0.01,
+      "threshold": 5.528795854715536,
+      "auxiliary_observed_fpr": 0.009981797897950796
+    },
+    {
+      "members": 16000,
+      "nonmembers": 14305,
+      "true_positives": 936,
+      "false_positives": 701,
+      "tpr": 0.0585,
+      "observed_fpr": 0.04900384480950717,
+      "advantage": 0.009496155190492836,
+      "tpr_95_ci": [
+        0.05496842916586694,
+        0.0622435204555662
+      ],
+      "fpr_95_ci": [
+        0.045585726709591864,
+        0.05266411852536686
+      ],
+      "nominal_auxiliary_fpr": 0.05,
+      "threshold": 2.6232879638249234,
+      "auxiliary_observed_fpr": 0.04999706417708884
+    }
+  ],
+  "notes": [
+    "Unit: whole patient, all stays IN or all stays OUT in each reference model.",
+    "Patient statistic: -log(mean per-stay BCE); Gaussian equal-variance likelihood ratio.",
+    "Membership score is NOT a calibrated probability of individual privacy risk.",
+    "Reference models use target-frozen features; preprocessing privacy is outside this audit.",
+    "Auditor knows all candidate patient records and outcomes; some target test patients are included in reference training, never target training.",
+    "The original test split has already been inspected for a mean-loss attack; treat this new result as exploratory, not an independent final test.",
+    "Bootstrap and Wilson intervals condition on a single target checkpoint and fixed thresholds; do not include model or shadow retraining uncertainty.",
+    "Subgroups use the GLOBAL auxiliary thresholds; subgroup FPRs may differ."
+  ]
+}

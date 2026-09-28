@@ -1,0 +1,129 @@
+{
+  "attack": "patient_signed_logit_global_variance_v2",
+  "mask_diagnostics": {
+    "coverage_repairs": 53,
+    "min_pairwise_different_patients": 31410,
+    "median_pairwise_different_patients": 31790.0,
+    "min_in": 6,
+    "max_in": 26
+  },
+  "score_diagnostics": {
+    "global_variance_in": 0.15869537742755688,
+    "global_variance_out": 0.15850213031044275,
+    "numerical_variance_floor": 1.5869537742755688e-09,
+    "fraction_negative_mean_effect": 0.4019917038233878,
+    "fraction_exact_zero_scores": 0.0
+  },
+  "checkpoint_epoch": 4,
+  "n_shadows": 32,
+  "shadow_best_epochs": [
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    4,
+    2,
+    4,
+    2,
+    3,
+    3,
+    3,
+    2,
+    2,
+    3,
+    3,
+    5,
+    4,
+    2,
+    3,
+    2,
+    3,
+    3,
+    3,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "in_out_count_ranges": {
+    "in": [
+      6,
+      26
+    ],
+    "out": [
+      6,
+      26
+    ]
+  },
+  "patient_counts": {
+    "train": 35759,
+    "auxiliary": 14303,
+    "test": 14305
+  },
+  "global": {
+    "auc": 0.5152806079308803,
+    "bootstrap_95_ci": [
+      0.5096532081994126,
+      0.5202079645497398
+    ]
+  },
+  "operating_points": [
+    {
+      "members": 35759,
+      "nonmembers": 14305,
+      "true_positives": 503,
+      "false_positives": 155,
+      "tpr": 0.014066388881120837,
+      "observed_fpr": 0.01083537224746592,
+      "advantage": 0.0032310166336549165,
+      "tpr_95_ci": [
+        0.01289694321020992,
+        0.015340227485062748
+      ],
+      "fpr_95_ci": [
+        0.009265323503896833,
+        0.012668070595401568
+      ],
+      "nominal_auxiliary_fpr": 0.01,
+      "threshold": 1.8349304810529712,
+      "auxiliary_observed_fpr": 0.009997902537929105
+    },
+    {
+      "members": 35759,
+      "nonmembers": 14305,
+      "true_positives": 2199,
+      "false_positives": 750,
+      "tpr": 0.06149500824967141,
+      "observed_fpr": 0.052429220552254456,
+      "advantage": 0.009065787697416956,
+      "tpr_95_ci": [
+        0.059051831179055436,
+        0.06403238918104143
+      ],
+      "fpr_95_ci": [
+        0.04889533855266086,
+        0.05620341896370326
+      ],
+      "nominal_auxiliary_fpr": 0.05,
+      "threshold": 0.7037468335217381,
+      "auxiliary_observed_fpr": 0.04998951268964553
+    }
+  ],
+  "notes": [
+    "Unit: whole patient, all stays IN or all stays OUT in each reference model.",
+    "Fresh uniform fixed-size reference samples followed by label-blind swaps to enforce minimum coverage.",
+    "Attack statistic and variance rule fixed before evaluation; never select variants by this Test AUC.",
+    "Patient statistic: mean true-label signed logit; two auxiliary-pooled residual variances; no sign clipping.",
+    "Membership score is NOT a calibrated probability of individual privacy risk.",
+    "Reference models use target-frozen features; preprocessing privacy is outside this audit.",
+    "Auditor knows all candidate patient records and outcomes; some target test patients are included in reference training, never target training.",
+    "The original test split has already been inspected for a mean-loss attack; treat this new result as exploratory, not an independent final test.",
+    "Bootstrap and Wilson intervals condition on a single target checkpoint and fixed thresholds; do not include model or shadow retraining uncertainty.",
+    "Subgroups use the GLOBAL auxiliary thresholds; subgroup FPRs may differ."
+  ]
+}

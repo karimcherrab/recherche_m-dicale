@@ -1,0 +1,61 @@
+{
+  "selected_on_shadow_models_only": "lira_shared",
+  "selection_rule": "Highest mean pseudo-target TPR-FPR at 1% FPR; tie-break mean AUC",
+  "number_of_shadows": 32,
+  "global": {
+    "auc": 0.5144535382840145,
+    "bootstrap_95_ci": [
+      0.5083926156294333,
+      0.519686892520875
+    ]
+  },
+  "operating_points": [
+    {
+      "members": 35759,
+      "nonmembers": 14305,
+      "true_positives": 773,
+      "false_positives": 131,
+      "tpr": 0.021616935596633014,
+      "observed_fpr": 0.009157637189793778,
+      "advantage": 0.012459298406839237,
+      "tpr_95_ci": [
+        0.020160201192836374,
+        0.02317644085237882
+      ],
+      "fpr_95_ci": [
+        0.0077230860330591376,
+        0.010855738785550897
+      ],
+      "nominal_auxiliary_fpr": 0.01,
+      "auxiliary_observed_fpr": 0.009997902537929105,
+      "threshold": 2.3909420300442306
+    },
+    {
+      "members": 35759,
+      "nonmembers": 14305,
+      "true_positives": 2532,
+      "false_positives": 760,
+      "tpr": 0.0708073491988031,
+      "observed_fpr": 0.053128276826284515,
+      "advantage": 0.01767907237251859,
+      "tpr_95_ci": [
+        0.0681946278424447,
+        0.07351227384924797
+      ],
+      "fpr_95_ci": [
+        0.049571315449991604,
+        0.05692517926665934
+      ],
+      "nominal_auxiliary_fpr": 0.05,
+      "auxiliary_observed_fpr": 0.04998951268964553,
+      "threshold": 0.581310068164027
+    }
+  ],
+  "notes": [
+    "The original target test split has already been inspected: this evaluation is exploratory.",
+    "Candidate selection used shadow-model IN/OUT membership labels, never target-model train/test labels.",
+    "Shadow pseudo-targets overlap in training examples; shadow-selection estimates are correlated.",
+    "Patient scores are attack statistics, not calibrated individual risk probabilities.",
+    "The same target-preprocessed features are used throughout; preprocessing leakage is not audited."
+  ]
+}

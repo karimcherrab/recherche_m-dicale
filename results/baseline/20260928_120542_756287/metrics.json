@@ -1,0 +1,59 @@
+{
+  "best_epoch": 4,
+  "threshold_selected_on_validation": 0.17240607150506151,
+  "notes": [
+    "AP = average precision, not trapezoidal PR area.",
+    "Patient-weighted metrics use per-record weight 1/n_records.",
+    "Predictions are per hospital encounter, not one clinical label per patient.",
+    "Validation is used for model and threshold selection; it is not a final estimate.",
+    "No privacy guarantee or membership-risk estimate is produced here."
+  ],
+  "train": {
+    "patient_weighted_loss": 0.228240895940847,
+    "patient_weighted_roc_auc": 0.768986228574521,
+    "patient_weighted_average_precision": 0.23717416112517947,
+    "record_loss": 0.3129277336933497,
+    "record_roc_auc": 0.7349987682451862,
+    "record_average_precision": 0.26835284144911914,
+    "patient_weighted_f1": 0.2954369434241491,
+    "record_f1": 0.32578766216574,
+    "record_recall": 0.43251318101933217,
+    "record_precision": 0.26130813336164793,
+    "record_accuracy": 0.8000431872165839,
+    "record_confusion_matrix": [
+      [
+        38294,
+        6957
+      ],
+      [
+        3229,
+        2461
+      ]
+    ],
+    "threshold": 0.17240607150506151
+  },
+  "validation": {
+    "patient_weighted_loss": 0.2428079160189614,
+    "patient_weighted_roc_auc": 0.669391649856747,
+    "patient_weighted_average_precision": 0.15106520973864698,
+    "record_loss": 0.3309598916401891,
+    "record_roc_auc": 0.6563584930361246,
+    "record_average_precision": 0.21738930447814758,
+    "patient_weighted_f1": 0.21716767010234947,
+    "record_f1": 0.2682682682682683,
+    "record_recall": 0.35892857142857143,
+    "record_precision": 0.21417155034629728,
+    "record_accuracy": 0.7862364752899893,
+    "record_confusion_matrix": [
+      [
+        7664,
+        1475
+      ],
+      [
+        718,
+        402
+      ]
+    ],
+    "threshold": 0.17240607150506151
+  }
+}

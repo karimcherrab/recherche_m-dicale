@@ -1,0 +1,9 @@
+{
+  "train_patients": 16000,
+  "target_epoch": 3,
+  "train_ap": 0.24628589861244854,
+  "validation_ap": 0.13937251843805584,
+  "min_validation_ap": 0.14,
+  "meets_utility_floor": false,
+  "checkpoint_sha256": "d753f60fad9e7809054cc98688a3db4c3f66a9866e49d2d453a9e351dfbd4859"
+}

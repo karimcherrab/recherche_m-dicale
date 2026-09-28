@@ -1,0 +1,30 @@
+{
+  "data_files_sha256": {
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\target_model\\best_model.pt": "d753f60fad9e7809054cc98688a3db4c3f66a9866e49d2d453a9e351dfbd4859",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\target_model\\config.json": "beb426196e063b088a7737aada4ef94f3b7cd9cb0cb46b24fa98a5567692cce6",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\report.json": "dbcfb7e7b3304f344d2e33e347db179d66a66bbec6e6e966f336b59abc5c6318",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\feature_names.json": "55f2bacf617cb8a0c3e41281687d729bd43dfd67482cf5b0f45816621ed2bcc3",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\patient_splits.csv": "9870bb6bef39072983520d136ca314ee33348088661dd4320497c2a7ef33b0c2",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\train\\X.npz": "f28a117db7cea1b7b27a8bef3633f67a9739e98b4de9b6db8891f519ad39e4c9",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\train\\y.npy": "96f8df29852ceb57576ee886cc95c1a45e55fbe6b7cf7f45e338e4b48ae13e99",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\train\\metadata.csv": "ac85e40de7516689f26dd5f8b7a43a067e3f855330a08a15cc3b82669a2b17a0",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\auxiliary\\X.npz": "91fa95d00f5acc8ee48e0b12fda404212ab9c0aa1712f5b0e092184c2601ce40",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\auxiliary\\y.npy": "4579f1c8c0deb67fdb034b2fca0137a9ac2726e28210a4928bdf6deedc467652",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\auxiliary\\metadata.csv": "8b5593b23c16952a82a295432f7ef5a819977c43b1b4389e88f6d7682cf5b714",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\test\\X.npz": "ec818e8ddd9c8410e000cae4c1d51dbe480e15b82d81965a5337b59756b99d58",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\test\\y.npy": "d7ce7a8aa6fb09fed0a14dfd5abed1b5ec5e69435f20b77a992752efd5a62736",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\test\\metadata.csv": "5b44539f99fc699602ed7b54f798a056658a44a6e4d7c4f075dc8eab379e0bca",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\validation\\X.npz": "4d12403e8de16c8ebdd5095d77c9eedb7fba0152bf198236a6f8f13c6ced3ace",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\validation\\y.npy": "53f5c41c8c67792759fdfd3671e15b1fa3e944db4a00f26ae66951e316e0d4ac",
+    "D:\\Doctorat\\prototype\\results\\new_model_audit\\20260928_155200_658634\\processed_stress\\validation\\metadata.csv": "564ea03a585f975d77dd5dab93aee183498b78f58aa6eab16904f7734b48780c"
+  },
+  "n_shadows": 28,
+  "seed": 2026,
+  "shadow_seed_start": 43001,
+  "torch_version": "2.14.0+cpu",
+  "device": "cpu",
+  "patient_count": 64367,
+  "n_target_train": 16000,
+  "target_epoch": 3,
+  "batch_size": 1024
+}

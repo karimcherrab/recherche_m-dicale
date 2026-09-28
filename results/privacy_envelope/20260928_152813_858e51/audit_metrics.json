@@ -1,0 +1,447 @@
+{
+  "mode": "checkpoint_queries_with_shadows",
+  "target_checkpoint_sha256": "4e86b03b27a3c5a93fd0092e17a9ca9e89b31bdf4013c7f1a7d1dc2499d563f2",
+  "lira_manifest_sha256": "a71a4351ea50cfaeb046880a89e9968727f1bde328337aaf96713420f1c03efb",
+  "seed": 2028,
+  "partition_counts": {
+    "member_fit": 17880,
+    "member_audit": 17879,
+    "aux_fit": 4768,
+    "aux_rank": 4768,
+    "aux_cal": 4767,
+    "test": 14305
+  },
+  "methods": [
+    "mean_loss",
+    "lira_shared",
+    "out_z",
+    "out_gap",
+    "supervised",
+    "best_record"
+  ],
+  "ranking_strata": [
+    "1_record",
+    "2_plus_records"
+  ],
+  "evaluations": {
+    "mean_loss": {
+      "auc": 0.5077616184089171,
+      "auc_95_bootstrap": [
+        0.5014782611640849,
+        0.5131733706771991
+      ],
+      "operating_points": [
+        {
+          "nominal_fpr": 0.01,
+          "tpr": 0.01101851333967224,
+          "test_fpr": 0.012023767913317022,
+          "tp": 197,
+          "fp": 172,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.00958997245884849,
+            0.012657132943098639
+          ],
+          "fpr_95_wilson": [
+            0.010364147872630155,
+            0.013945399467155827
+          ],
+          "advantage": -0.0010052545736447815
+        },
+        {
+          "nominal_fpr": 0.05,
+          "tpr": 0.05755355444935399,
+          "test_fpr": 0.0564138413142258,
+          "tp": 1029,
+          "fp": 807,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.05423381909927348,
+            0.06106337590010917
+          ],
+          "fpr_95_wilson": [
+            0.052750726566206184,
+            0.0603151329917928
+          ],
+          "advantage": 0.0011397131351281939
+        }
+      ]
+    },
+    "lira_shared": {
+      "auc": 0.513820761682004,
+      "auc_95_bootstrap": [
+        0.5072726977705329,
+        0.5194094027232932
+      ],
+      "operating_points": [
+        {
+          "nominal_fpr": 0.01,
+          "tpr": 0.023659041333407908,
+          "test_fpr": 0.010555749737853897,
+          "tp": 423,
+          "fp": 151,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.021531457754523073,
+            0.025991272946727456
+          ],
+          "fpr_95_wilson": [
+            0.009007498475531174,
+            0.012366800743652486
+          ],
+          "advantage": 0.01310329159555401
+        },
+        {
+          "nominal_fpr": 0.05,
+          "tpr": 0.07271100173387773,
+          "test_fpr": 0.056064313177210764,
+          "tp": 1300,
+          "fp": 802,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.06899595669828454,
+            0.0766096208502628
+          ],
+          "fpr_95_wilson": [
+            0.0524123151379274,
+            0.05995467581992817
+          ],
+          "advantage": 0.01664668855666697
+        }
+      ]
+    },
+    "out_z": {
+      "auc": 0.5239158239905408,
+      "auc_95_bootstrap": [
+        0.51769552887259,
+        0.5307066491613917
+      ],
+      "operating_points": [
+        {
+          "nominal_fpr": 0.01,
+          "tpr": 0.02477767212931372,
+          "test_fpr": 0.010276127228241873,
+          "tp": 443,
+          "fp": 147,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.022599164795624113,
+            0.02716034690556477
+          ],
+          "fpr_95_wilson": [
+            0.008749970741528527,
+            0.012065233597540402
+          ],
+          "advantage": 0.014501544901071847
+        },
+        {
+          "nominal_fpr": 0.05,
+          "tpr": 0.07914312881033615,
+          "test_fpr": 0.05277874868926949,
+          "tp": 1415,
+          "fp": 755,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.07527580711778585,
+            0.08319126118040703
+          ],
+          "fpr_95_wilson": [
+            0.04923330465819649,
+            0.05656432145831104
+          ],
+          "advantage": 0.026364380121066663
+        }
+      ]
+    },
+    "out_gap": {
+      "auc": 0.5231636004967878,
+      "auc_95_bootstrap": [
+        0.5173640950090161,
+        0.5291823148068302
+      ],
+      "operating_points": [
+        {
+          "nominal_fpr": 0.01,
+          "tpr": 0.009732087924380559,
+          "test_fpr": 0.011534428521495981,
+          "tp": 174,
+          "fp": 165,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.008394725425773365,
+            0.011280081826244659
+          ],
+          "fpr_95_wilson": [
+            0.00991111464046483,
+            0.013420016659120378
+          ],
+          "advantage": -0.0018023405971154226
+        },
+        {
+          "nominal_fpr": 0.05,
+          "tpr": 0.0776889087756586,
+          "test_fpr": 0.05732261447046487,
+          "tp": 1389,
+          "fp": 820,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.07385530910007279,
+            0.08170394389820024
+          ],
+          "fpr_95_wilson": [
+            0.05363078576747268,
+            0.061252132150899155
+          ],
+          "advantage": 0.020366294305193725
+        }
+      ]
+    },
+    "supervised": {
+      "auc": 0.5255370351541164,
+      "auc_95_bootstrap": [
+        0.5181343827186282,
+        0.531354514782749
+      ],
+      "operating_points": [
+        {
+          "nominal_fpr": 0.01,
+          "tpr": 0.025169192907880753,
+          "test_fpr": 0.01083537224746592,
+          "tp": 450,
+          "fp": 155,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.022973153956794366,
+            0.027569231094372943
+          ],
+          "fpr_95_wilson": [
+            0.009265323503896873,
+            0.012668070595401515
+          ],
+          "advantage": 0.014333820660414833
+        },
+        {
+          "nominal_fpr": 0.05,
+          "tpr": 0.0734381117512165,
+          "test_fpr": 0.05445648374694163,
+          "tp": 1313,
+          "fp": 779,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.06970543785324478,
+            0.07735404734526248
+          ],
+          "fpr_95_wilson": [
+            0.050856156758646825,
+            0.058296038638549055
+          ],
+          "advantage": 0.01898162800427488
+        }
+      ]
+    },
+    "best_record": {
+      "auc": 0.5067868300050091,
+      "auc_95_bootstrap": [
+        0.5017285542670534,
+        0.5129353628655905
+      ],
+      "operating_points": [
+        {
+          "nominal_fpr": 0.01,
+          "tpr": 0.010235471782538173,
+          "test_fpr": 0.011394617266689968,
+          "tp": 183,
+          "fp": 163,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.00886173660673022,
+            0.011819622095260062
+          ],
+          "fpr_95_wilson": [
+            0.00978182115901001,
+            0.013269762700517832
+          ],
+          "advantage": -0.0011591454841517954
+        },
+        {
+          "nominal_fpr": 0.05,
+          "tpr": 0.055819676715699984,
+          "test_fpr": 0.056274030059419784,
+          "tp": 998,
+          "fp": 805,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.05254900390049368,
+            0.05928118054898453
+          ],
+          "fpr_95_wilson": [
+            0.052615357093829765,
+            0.06017095502411185
+          ],
+          "advantage": -0.00045435334371980024
+        }
+      ]
+    },
+    "clinical_only_control": {
+      "auc": 0.49943311106883614,
+      "auc_95_bootstrap": [
+        0.4936043894646249,
+        0.5050132161477973
+      ],
+      "operating_points": [
+        {
+          "nominal_fpr": 0.01,
+          "tpr": 0.012025281055987472,
+          "test_fpr": 0.010975183502271934,
+          "tp": 215,
+          "fp": 157,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.010529133908037069,
+            0.01373107439385458
+          ],
+          "fpr_95_wilson": [
+            0.009394343961267721,
+            0.01281859757808803
+          ],
+          "advantage": 0.0010500975537155385
+        },
+        {
+          "nominal_fpr": 0.05,
+          "tpr": 0.04854857654231221,
+          "test_fpr": 0.04753582663404404,
+          "tp": 868,
+          "fp": 680,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.04549405548085979,
+            0.05179705246901911
+          ],
+          "fpr_95_wilson": [
+            0.04416875504258422,
+            0.05114584207177217
+          ],
+          "advantage": 0.0010127499082681693
+        }
+      ]
+    },
+    "envelope": {
+      "auc": 0.5219607771915208,
+      "auc_95_bootstrap": [
+        0.5162511517918845,
+        0.5280994261904939
+      ],
+      "operating_points": [
+        {
+          "nominal_fpr": 0.01,
+          "tpr": 0.02203702667934448,
+          "test_fpr": 0.012443201677735058,
+          "tp": 394,
+          "fp": 178,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.019985621121977527,
+            0.024293777129362384
+          ],
+          "fpr_95_wilson": [
+            0.01075306201860665,
+            0.014395127641351422
+          ],
+          "advantage": 0.009593825001609423
+        },
+        {
+          "nominal_fpr": 0.05,
+          "tpr": 0.06952290396554617,
+          "test_fpr": 0.052219503670045436,
+          "tp": 1243,
+          "fp": 747,
+          "member_count": 17879,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.06588648041261108,
+            0.07334427128611196
+          ],
+          "fpr_95_wilson": [
+            0.048692580514036334,
+            0.05598685584224173
+          ],
+          "advantage": 0.01730340029550073
+        }
+      ]
+    },
+    "unsupervised_envelope_all_members": {
+      "auc": 0.5207148756014024,
+      "auc_95_bootstrap": [
+        0.5143802166224064,
+        0.5271395059662828
+      ],
+      "operating_points": [
+        {
+          "nominal_fpr": 0.01,
+          "tpr": 0.020833915937246567,
+          "test_fpr": 0.013212163579168122,
+          "tp": 745,
+          "fp": 189,
+          "member_count": 35759,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.01940420465291984,
+            0.022366566289338346
+          ],
+          "fpr_95_wilson": [
+            0.011467416620766724,
+            0.015218283959506845
+          ],
+          "advantage": 0.007621752358078444
+        },
+        {
+          "nominal_fpr": 0.05,
+          "tpr": 0.06865404513549037,
+          "test_fpr": 0.051310730513806364,
+          "tp": 2455,
+          "fp": 734,
+          "member_count": 35759,
+          "test_count": 14305,
+          "tpr_95_wilson": [
+            0.06607924829172597,
+            0.07132150786683493
+          ],
+          "fpr_95_wilson": [
+            0.04781415226817175,
+            0.05504822572773346
+          ],
+          "advantage": 0.017343314621684
+        }
+      ]
+    }
+  },
+  "notes": [
+    "Entire patients, not visits, are the independent audit units.",
+    "The auditor knows candidate visits and outcomes and known membership for the supervised attack's fit patients.",
+    "Patient IDs are for joining/reporting only, never model or attacker features.",
+    "Two disjoint Auxiliary nonmember slices calibrate per-method ranks then the max across methods.",
+    "The unsupervised envelope audits all training patients; the supervised envelope evaluates only patients held out from attacker training.",
+    "The same Auxiliary ranking slice supplies self-inclusive ranks for its own patients; these are illustrative, not held-out p-values.",
+    "p_envelope is a nonmember-tail p-value, NOT the probability of membership or patient-specific privacy loss.",
+    "FPR validity assumes exchangeability of Auxiliary and future nonmembers for this target model.",
+    "A subgroup's FPR is observed, not guaranteed equal to the global nominal FPR.",
+    "This target Test has been examined in previous attacks; all results are exploratory, not a new independent test.",
+    "CIs condition on one checkpoint, fitted attack, and calibration set; they exclude retraining variability.",
+    "Shadow models use target-frozen preprocessing; preprocessing privacy is outside this audit."
+  ]
+}
